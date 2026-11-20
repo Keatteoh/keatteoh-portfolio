@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GreenSlate: product design and systems · Keat Teoh</title>
+  <meta name="description" content="A cross-team design system, file attachments, personas, report migration and more for GreenSlate's production accounting platform." />
+  <meta property="og:image" content="/assets/img/greenslate.webp" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/">Keat Teoh</a>
+      <nav class="quick" aria-label="Résumé and profiles">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="btn btn-solid" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span>Résumé</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-hero wrap">
+      <a class="back" href="/#work"><span aria-hidden="true">←</span> All case studies</a>
+      <p class="meta"><span>03</span> GreenSlate · Product Designer · 2017–2021</p>
+      <h1>GreenSlate: product design and systems</h1>
+      <p class="lede"><a href="https://gslate.com/" target="_blank" rel="noopener">GreenSlate</a> is an enterprise resource planning platform built for media production, with tools for accounting, payroll, approval flows, team management, and business intelligence. I worked on many projects there, as both product designer and feature owner.</p>
+      <dl class="snapshot">
+        <div><dt>Role</dt><dd>Product designer and feature owner (promoted from junior designer)</dd></div>
+        <div><dt>Location</dt><dd>New York, NY</dd></div>
+        <div><dt>Timeline</dt><dd>August 2017 – November 2021</dd></div>
+        <div><dt>Owned</dt><dd>Purchase Orders, Incentives Dashboard, Approval Flows, PEX integration</dd></div>
+      </dl>
+      <figure class="cs-cover"><img src="/assets/img/greenslate.webp" alt="GreenSlate's web app on a laptop" width="898" height="598" /></figure>
+      <ul class="toc" aria-label="Projects on this page">
+        <li><a href="#design-system">Design system</a></li>
+        <li><a href="#attachments">File attachments</a></li>
+        <li><a href="#personas">User personas</a></li>
+        <li><a href="#reports">Accounting reports</a></li>
+        <li><a href="#pex">PEX prepaid cards</a></li>
+        <li><a href="#incentives">Incentives dashboard</a></li>
+        <li><a href="#tax">Tax documents</a></li>
+        <li><a href="#sitemap">Sitemap</a></li>
+      </ul>
+    </header>
+
+    <article class="cs-body wrap">
+      <section id="design-system">
+        <h2><span class="num">Project 1</span>A cross-team design system</h2>
+        <p>As the web app added features, its library of components and design conventions grew with it. The application had accumulated design and technical debt, and the best way to tackle it was a cross-team design system.</p>
+        <ul class="steps">
+          <li>Designed a framework for the system, so it could inform every team</li>
+          <li>Ran an application-wide UI audit to capture every existing component, spot inconsistencies and normalize UI conventions</li>
+          <li>Built the system with development (codebase), marketing (brand guidelines) and design, so it works for everyone</li>
+        </ul>
+        <div class="fig-grid wide">
+          <figure class="fig"><img src="/assets/img/greenslate/02.webp" alt="The parts of the design system" width="511" height="451" loading="lazy" /><figcaption><strong>System framework</strong></figcaption></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/07.webp" alt="Notes on understanding the codebase" width="593" height="461" loading="lazy" /><figcaption><strong>Understanding the codebase</strong></figcaption></figure>
+        </div>
+        <figure class="fig wide"><img src="/assets/img/greenslate/03.webp" alt="Visual audit of UI components across the app" width="1766" height="1115" loading="lazy" /><figcaption><strong>Visual audit</strong></figcaption></figure>
+        <div class="fig-grid three wide">
+          <figure class="fig"><img src="/assets/img/greenslate/04.webp" alt="Input type specifications" width="1774" height="1102" loading="lazy" /><figcaption><strong>Input types</strong></figcaption></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/05.webp" alt="Colour palette" width="1442" height="1111" loading="lazy" /><figcaption><strong>Colour palette</strong></figcaption></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/06.webp" alt="Web font specifications" width="1385" height="1106" loading="lazy" /><figcaption><strong>Web fonts</strong></figcaption></figure>
+        </div>
+      </section>
+
+      <section id="attachments">
+        <h2><span class="num">Project 2</span>Enhancing file attachments</h2>
+        <p>Users needed to attach files to individual transaction lines, rather than to one general repository for all transactions.</p>
+        <ul class="steps">
+          <li>Interviewed users and subject matter experts on how attachments are used to build a "digital envelope" for expense reconciliation</li>
+          <li>Ran a competitive analysis of Expensify's UI and UX for best practices</li>
+          <li>Audited the existing file upload process and outlined the changes needed</li>
+          <li>Prototyped the new UI for desktop and mobile, iterating on stakeholder feedback</li>
+        </ul>
+        <div class="fig-grid wide">
+          <figure class="fig"><img src="/assets/img/greenslate/08.webp" alt="File attachment design, screen 1" width="1229" height="968" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/09.webp" alt="File attachment design, screen 2" width="1090" height="932" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/10.webp" alt="File attachment design, screen 3" width="1047" height="935" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/greenslate/11.webp" alt="File attachment design, screen 4" width="1108" height="876" loading="lazy" /></figure>
+        </div>
+      </section>
+
+      <section id="personas">
+        <h2><span class="num">Project 3</span>User personas</h2>
+        <p>GreenSlate serves many kinds of users, and the team needed a shared definition of them to reference when building features.</p>
+        <ul class="steps">
+          <li>Interviewed subject matter experts on the roles people hold on productions, which vary by scale and media type</li>
+          <li>Interviewed users about their daily workflow, their comfort with technology, accounting and production, and their favourite app and film</li>
+          <li>Compiled the findings into a master PDF shared with the team</li>
+        </ul>
+        <figure class="fig wide"><img src="/assets/img/greenslate/12.webp" alt="Persona sheets for internal and external users" width="1873" height="1059" loading="lazy" /><figcaption>Personas of both internal and external users.</figcaption></figure>
+      </section>
+
+      <section id="reports">
+        <h2><span class="num">Project 4</span>Migrating accounting reports</h2>
+        <p>Moving the Accounting Reports feature from GreenSlate's legacy software to the new web application.</p>
+        <ul class="steps">
+          <li>Audited each report type and its filter parameters</li>
+          <li>Documented the findings as the master spec, with flowcharts and spreadsheets</li>
+          <li>Updated or removed redundant filters to simplify the experience</li>
+          <li>Prototyped the new UI, iterating on stakeholder feedback</li>
+          <li>Oversaw QA and user testing for a seamless transition for new and existing users</li>
+        </ul>
+        <figure class="fig"><img src="/assets/img/greenslate/13.webp" alt="Legacy accounting report UI above the new web app version" width="496" height="510" loading="lazy" /><figcaption>The legacy software (top) and the new web application (bottom).</figcaption></figure>
+      </section>
+
+      <section id="pex">
+        <h2><span class="num">Project 5</span>Integrating PEX prepaid cards</h2>
+        <p>A card management tool, built with a partner company.</p>
+        <ul class="steps">
+          <li>Ran a competitive analysis of the PEX portal and other prepaid card services</li>
+          <li>Worked with stakeholders to define the MVP for adoption, and a roadmap for later enhancements</li>
+          <li>Documented user flows, workflows and user stories, and prototyped the main and adjacent pages</li>
+          <li>Oversaw testing in a sandbox environment to ensure data integrity</li>
+          <li>Worked with client support to move clients from the legacy import method to the new API</li>
+        </ul>
+        <figure class="fig"><img src="/assets/img/greenslate/14.webp" alt="GreenSlate's card management feature" width="681" height="437" loading="lazy" /><figcaption>GreenSlate's card management feature.</figcaption></figure>
+      </section>
+
+      <section id="incentives">
+        <h2><span class="num">Project 6</span>Incentives dashboard</h2>
+        <p>A dashboard for the accounting team to track, manage and share tax credit incentives with clients.</p>
+        <ul class="steps">
+          <li>Interviewed subject matter experts on tax credit applications, and mapped the submission and processing workflows</li>
+          <li>Prototyped the incentives dashboard and creation page, and reviewed them with stakeholders</li>
+          <li>Ran testing with accountants to keep improving the experience</li>
+        </ul>
+        <figure class="fig"><img src="/assets/img/greenslate/15.webp" alt="Tax incentives dashboard" width="733" height="452" loading="lazy" /></figure>
+      </section>
+
+      <section id="tax">
+        <h2><span class="num">Project 7</span>Tax documents and adoption</h2>
+        <p>A feature for users to access their annual tax documents, and an effort to move users from paper to digital.</p>
+        <ul class="steps">
+          <li>Interviewed experts on the tax document workflow and the legal requirements for sensitive documents</li>
+          <li>Prototyped the page and defined the onboarding workflow, iterating on stakeholder feedback</li>
+          <li>Documented the flows for users opting in to digital tax documents</li>
+          <li>Worked with client support to import every client's tax documents into the app</li>
+          <li>Led the cross-department effort to opt existing and new users in to digital documents</li>
+        </ul>
+        <figure class="fig"><img src="/assets/img/greenslate/16.webp" alt="Tax documents page" width="554" height="445" loading="lazy" /></figure>
+      </section>
+
+      <section id="sitemap">
+        <h2><span class="num">Project 8</span>Reorganizing the sitemap</h2>
+        <p>The navigation menu was growing quickly with new features, and needed a new hierarchy and categories.</p>
+        <ul class="steps">
+          <li>Defined the application's sitemap through an audit</li>
+          <li>Consulted subject matter experts on feature priorities</li>
+          <li>Grouped features by production role, splitting them into company-level and project-level features</li>
+          <li>Defined breadcrumb paths to help users move around the app</li>
+          <li>Prototyped the new navigation and presented it to stakeholders</li>
+        </ul>
+        <figure class="fig"><img src="/assets/img/greenslate/17.webp" alt="The reorganized left navigation" width="501" height="473" loading="lazy" /></figure>
+      </section>
+    </article>
+
+    <nav class="next wrap" aria-label="Next case study">
+      <p class="next-label">Next case study</p>
+      <a class="next-card" href="/work/beyond-the-breakdown/">
+        <img src="/assets/img/beyond-the-breakdown/01.webp" alt="" width="1628" height="1127" loading="lazy" />
+        <div>
+          <p class="meta"><span>Sundance 2021</span> Beyond the Breakdown</p>
+          <h2>Beyond the Breakdown</h2>
+          <p>Visual and UX/UI design for an AI-moderated chatroom that premiered at Sundance.</p>
+          <span class="more">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap">
+    <p><a href="/">Home</a> · <a href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">Résumé</a> · <a href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:keat.teoh@gmail.com">keat.teoh@gmail.com</a></p>
+    <p>© Keat Teoh</p>
+  </footer>
+  <script src="/case.js" defer></script>
+</body>
+</html>

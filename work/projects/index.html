@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects: one search, many people · Keat Teoh</title>
+  <meta name="description" content="How I put the whole lifecycle of a recruiting search on one page at Thrive TRM, and gave each person a view that shows only what they need." />
+  <meta property="og:image" content="/assets/img/thrive-projects.webp" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/">Keat Teoh</a>
+      <nav class="quick" aria-label="Résumé and profiles">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="btn btn-solid" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span>Résumé</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-hero wrap">
+      <a class="back" href="/#work"><span aria-hidden="true">←</span> All case studies</a>
+      <p class="meta"><span>01</span> Thrive TRM · Senior Product Designer · 2024–2026</p>
+      <h1>Projects: one search, many people</h1>
+      <p class="lede">I put the whole lifecycle of a recruiting search on one page, then gave each person involved a view that shows only what they need, including a client portal for hiring managers.</p>
+      <dl class="snapshot">
+        <div><dt>Role</dt><dd>Lead product designer for Projects; one of two lead designers on the Thrive TRM rebuild</dd></div>
+        <div><dt>Team</dt><dd>One PM, one front-end and one back-end engineer, with design and product leadership reviewing</dd></div>
+        <div><dt>Timeline</dt><dd>A two-year, ground-up build; the rebuild work began in 2024</dd></div>
+        <div><dt>Scale</dt><dd>The core workflow in the new app, supporting the migration of 200+ clients</dd></div>
+      </dl>
+      <figure class="cs-cover"><img src="/assets/img/projects/01.webp" alt="The Projects kanban view, with candidates arranged in columns by search stage" width="1695" height="1030" /></figure>
+    </header>
+
+    <article class="cs-body wrap">
+      <section>
+        <h2><span class="num">The problem</span>A tracking tool, not a workspace</h2>
+        <p>The original app was built ad hoc. It was disjointed and clunky to navigate, and recruiters did most of their real work somewhere else: email, LinkedIn Recruiter, phone calls, and spreadsheets. The app was mostly a tracking tool for sharing status with teammates or clients.</p>
+        <p>Hiring managers had no access at all. Recruiters assembled reports and presentations by hand for every client conversation, and that could take hours.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">The idea</span>One page for the entire search</h2>
+        <p>The kickoff call, strategy and research, sourcing candidates, presenting candidates, summary reports and pre-call agendas, interviews, assessments, offer letters, and placement. After a search ends, the Project keeps working: it becomes a benchmark for similar roles, a source of future candidates, and a compensation comparison.</p>
+        <p>But a recruiter and a hiring manager need very different things from the same search. The principle I designed around:</p>
+        <blockquote class="quote"><p>“Everyone looks at the same search, but each within their own context.”</p></blockquote>
+      </section>
+
+      <section>
+        <h2><span class="num">Research</span>Who needs what within a search</h2>
+        <figure class="fig wide"><img src="/assets/img/projects/02.webp" alt="Chart comparing what a recruiter and a hiring manager need at each stage of a search" width="919" height="423" loading="lazy" /></figure>
+        <p>The recruiter's side is rich at every stage. The hiring manager's side is narrow and concentrated in the middle. That asymmetry was the design problem. Other users within a search team include the Partner, Researcher, Engagement Coordinator and Analyst, each with their own role and goals.</p>
+        <figure class="fig wide">
+          <img src="/assets/img/projects/03.webp" alt="User journey map for the Executive Search customer type" width="2500" height="1082" loading="lazy" />
+          <figcaption>One of the user journey maps for the Executive Search customer type. Other customer types include Venture Capital/Private Equity and Enterprise, which were not the focus of the initial rebuild.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">Design</span>One Project, three lenses</h2>
+        <p>The same candidates appear in three views, each answering a different question.</p>
+        <figure class="fig wide"><img src="/assets/img/projects/04.webp" alt="The three Project views: card list, kanban with side panel, and table" width="919" height="184" loading="lazy" /></figure>
+        <p>Information also deepens in three levels: the card shows the basics, the list adds search-progress detail, and the side panel holds everything about the person. A recruiter can step through candidates in a stage with the panel open, so they never lose their place.</p>
+        <p>I decided what belongs on a kanban card versus the side panel. The panel itself holds many tabs (experience, notes, outreaches, assessments, interviews, activity, compensation, documents, network), and I think of them in four groups: <strong>who they are, can we approach them, how is the search going, and what is sensitive.</strong></p>
+        <figure class="fig wide">
+          <img src="/assets/img/projects/05.webp" alt="Card list view of a Project" width="1693" height="1048" loading="lazy" />
+          <figcaption><strong>Card list view</strong>To track specific activities.</figcaption>
+        </figure>
+        <div class="fig-grid wide">
+          <figure class="fig">
+            <img src="/assets/img/projects/06.webp" alt="Kanban view with a candidate's side panel open" width="1692" height="1035" loading="lazy" />
+            <figcaption><strong>Side panel view</strong>To dive deeper into a candidate's profile.</figcaption>
+          </figure>
+          <figure class="fig">
+            <img src="/assets/img/projects/07.webp" alt="Table view of a Project" width="1694" height="1051" loading="lazy" />
+            <figcaption><strong>Table view</strong>For high-level data analysis.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">Decisions</span>Standard rails, flexible content</h2>
+        <p>Two decisions went in opposite directions on purpose.</p>
+        <ul class="points">
+          <li><strong>Stages are standardized.</strong>An admin sets them once for the whole customer, with logic that triggers workflows at specific stages, so every search shares one mental model of the candidate search.</li>
+          <li><strong>Exceptions are labeled, not special cases.</strong>A candidate the client brought in up front (a carve-out) sits in the same stage as everyone else, marked with a tag. The workflow stays simple while the data stays rich.</li>
+          <li><strong>Assessment criteria stay flexible.</strong>They are set per search. My co-designer moved this from an admin-managed setup to a self-service workflow, so recruiters can reuse criteria from earlier searches instead of starting from scratch or being stuck with criteria that go stale.</li>
+        </ul>
+        <div class="lesson"><p><strong>The rule behind both:</strong> standardize what people need to share, and let what varies stay flexible.</p></div>
+        <p>The same thinking shows up at the moment of action. When a recruiter adds a candidate, the app warns them if the person is off-limits, and offers a toggle to hide the candidate from the hiring team in the same step. Drag and drop follows one rule as well: when a column is sorted, position is computed, so manual placement is turned off instead of offering a choice the system cannot honor.</p>
+        <figure class="fig wide"><img src="/assets/img/projects/08.webp" alt="The add-to-project flow, with an off-limits warning and a toggle to hide the candidate from the hiring team" width="1695" height="1028" loading="lazy" /></figure>
+      </section>
+
+      <section>
+        <h2><span class="num">Client portal</span>The hiring manager's view</h2>
+        <p>The hiring manager sees the same search through a different lens.</p>
+        <figure class="fig wide"><img src="/assets/img/projects/09.webp" alt="Side-by-side comparison of what a recruiter and a hiring manager see" width="919" height="391" loading="lazy" /></figure>
+        <p>A few decisions worth naming:</p>
+        <ul class="points">
+          <li><strong>Signals, not decisions.</strong>Thumbs up and down tell the recruiter how many people want to proceed. The recruiter or team lead still moves candidates between stages, so authority stays where it belongs.</li>
+          <li><strong>A shared vocabulary, translated.</strong>The same objects carry different names for different audiences, which keeps the client's screen free of internal jargon.</li>
+          <li><strong>Preview before sharing.</strong>Recruiters can view the project as a hiring team member, with a clear banner and an easy exit, before the client ever sees it.</li>
+          <li><strong>Meeting clients where they are.</strong>Recruiters can fill out an assessment on someone's behalf, or send an external link so a client does not have to log into another platform.</li>
+          <li><strong>Responsive design for the on-the-go user.</strong>The portal was designed across five breakpoints, with the candidate panel taking over the screen on narrow widths.</li>
+        </ul>
+        <figure class="fig wide">
+          <img src="/assets/img/projects/10.webp" alt="Recruiter view compared with the hiring manager's portal view" width="2500" height="766" loading="lazy" />
+          <figcaption>Recruiters need a data-rich display with multiple views; hiring managers care about a candidate's recent touch-points and upcoming interviews.</figcaption>
+        </figure>
+        <figure class="fig wide">
+          <img src="/assets/img/projects/11.webp" alt="Client portal layouts across five breakpoints, from desktop to phone" width="2500" height="1863" loading="lazy" />
+          <figcaption>Hiring managers check in frequently and in short bursts, so optimizing for mobile screens is key to how they work.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">Permissions</span>Layers of control</h2>
+        <p>Who sees what is decided at three levels, each at the moment the recruiter acts.</p>
+        <figure class="fig wide"><img src="/assets/img/projects/12.webp" alt="The three levels of sharing control" width="919" height="184" loading="lazy" /></figure>
+        <p>Compensation shown to the hiring team is always aggregated, never per candidate. Candidates hidden from the hiring team also stay out of generated reports by default.</p>
+        <blockquote class="quote"><p>Sharing is a choice made at the moment of writing, not a setting to find later.</p></blockquote>
+        <figure class="fig wide"><img src="/assets/img/projects/13.webp" alt="Scorecard sharing options" width="1696" height="1035" loading="lazy" /></figure>
+      </section>
+
+      <section>
+        <h2><span class="num">Reporting</span>Getting information to the client</h2>
+        <p>The same data reaches the client in three shapes, matched to three moments.</p>
+        <figure class="fig wide"><img src="/assets/img/projects/14.webp" alt="Three ways information reaches the client" width="919" height="168" loading="lazy" /></figure>
+        <figure class="fig wide">
+          <img src="/assets/img/projects/15.webp" alt="Generating a pre-call agenda from a Project" width="1691" height="1036" loading="lazy" />
+          <figcaption>Generated outputs let the recruiter choose which stages and details to include, and they respect any filter or sort already applied on screen.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">Outcomes</span>What changed</h2>
+        <div class="outcomes wide">
+          <div><b>2,000+</b><span>hiring-team users on the client portal in the five months after launch</span></div>
+          <div><b>Hours</b><span>saved every week: teams generate call documents from fresh data, or let clients self-serve in the portal</span></div>
+          <div><b>200+</b><span>clients migrated; in the final three months I shipped a migration feature gap every week</span></div>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">Across the product</span>Beyond one feature</h2>
+        <p>The same approach shows up in work across the product:</p>
+        <ul class="points">
+          <li><strong>Tagging.</strong>An improved candidate tagging workflow across a large legacy taxonomy, with consistent selection and display in cards, expanded cards, and panels. Commonly used tag management moved to an admin page instead of letting anyone add new tags to the shared repository. Recruiters can still create project-specific tags; they stay local and don't affect the admin repository.</li>
+          <li><strong>Configurable administration.</strong>Admin settings let each organization define its own event types, document types, and team functions.</li>
+          <li><strong>Shared patterns.</strong>Standardized empty states and form patterns (including autosave forms) across people, companies, and projects, built on a customized MUI-based design system.</li>
+          <li><strong>Visibility rules for references.</strong>Official references, backchannel information, and client-facing content follow different visibility rules.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">Process</span>How I work now</h2>
+        <p>Starting around September 2026, our Director of Product helped the team set up a prototyping workflow that combines VS Code and Claude.</p>
+        <ul class="points">
+          <li><strong>The setup.</strong>The production codebase is cloned into a separate repository and synced at regular intervals. Each prototype branches from that clone, so it starts from real components and real code. There is no backend, so prototypes run on dummy data.</li>
+          <li><strong>How I build.</strong>I describe the feature in full: the product requirements, the UX requirements, and the scope, so the right pages and panels appear with believable data. Then I iterate in code instead of in static frames. Sometimes the PM arrives with an early prototype and I branch from theirs.</li>
+          <li><strong>The process around it.</strong>I work in a pod with a PM against a roadmap, mostly migration feature gaps from August to October 2026. For each item we decide what to tackle next, then research it: talking with customer service and with recruiters who are open to speaking with product, and sometimes digging into past usage data.</li>
+          <li><strong>Review.</strong>I bring a prototype as close to the expected behavior as I can, then review it with the design team weekly, with PMs through a recorded walkthrough, and with developers in daily stand-ups to catch technical constraints. The nearly final version goes to the VP and Director of Product.</li>
+          <li><strong>Handoff.</strong>With the PM, I write the Jira epic or tickets, attach the Figma artifacts, and walk developers through the prototype live in sprint meetings. Once code is live on a development environment, I join QA as another check for UX friction and bugs.</li>
+        </ul>
+        <div class="lesson"><h3>What AI does and what I keep</h3><p>AI turns a detailed description into a working prototype quickly. I keep the problem definition, the research, the decisions about what to build and what to leave out, every review, and the final quality check.</p></div>
+      </section>
+    </article>
+
+    <nav class="next wrap" aria-label="Next case study">
+      <p class="next-label">Next case study</p>
+      <a class="next-card" href="/work/market-maps/">
+        <img src="/assets/img/market-maps/01.webp" alt="" width="1742" height="769" loading="lazy" />
+        <div>
+          <p class="meta"><span>Thrive TRM</span> Market Maps</p>
+          <h2>Market Maps: who sits where</h2>
+          <p>Designing a feature around a data source that never arrived.</p>
+          <span class="more">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap">
+    <p><a href="/">Home</a> · <a href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">Résumé</a> · <a href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:keat.teoh@gmail.com">keat.teoh@gmail.com</a></p>
+    <p>© Keat Teoh</p>
+  </footer>
+  <script src="/case.js" defer></script>
+</body>
+</html>

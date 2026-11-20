@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Maps: who sits where · Keat Teoh</title>
+  <meta name="description" content="Bringing recruiters' hand-built market maps into Thrive TRM, and designing under uncertainty when a key data source never arrived." />
+  <meta property="og:image" content="/assets/img/market-maps/01.webp" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/">Keat Teoh</a>
+      <nav class="quick" aria-label="Résumé and profiles">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="btn btn-solid" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span>Résumé</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-hero wrap">
+      <a class="back" href="/#work"><span aria-hidden="true">←</span> All case studies</a>
+      <p class="meta"><span>Thrive TRM</span> Senior Product Designer · 2024–2025</p>
+      <h1>Market Maps: who sits where</h1>
+      <p class="lede">Before every search, recruiters build a market map: a view of who sits where across a set of companies. They built them by hand in spreadsheets. I led the design of Market Maps, which brings that work into the app. We planned it around a third-party people database that never came through, so this case study is as much about designing under uncertainty as it is about the interface.</p>
+      <dl class="snapshot">
+        <div><dt>Role</dt><dd>Lead product designer; one of two lead designers on the Thrive TRM rebuild</dd></div>
+        <div><dt>Team</dt><dd>One PM, one front-end and one back-end engineer, with design and product leadership reviewing</dd></div>
+        <div><dt>Timeline</dt><dd>Designed and built August–October 2024; shipped early 2025</dd></div>
+        <div><dt>Platform</dt><dd>Desktop enterprise web app</dd></div>
+      </dl>
+      <figure class="cs-cover"><img src="/assets/img/market-maps/01.webp" alt="Market Maps in the Thrive TRM app" width="1742" height="769" /></figure>
+    </header>
+
+    <article class="cs-body wrap">
+      <section>
+        <h2><span class="num">The problem</span>Every map started from scratch</h2>
+        <p>The sheets vary from project to project. Without a template, recruiters start from scratch every time and fill the maps in by hand. Past maps were hard to find and hard to trust, formats were inconsistent, the research was slow, and turning a sheet into something presentable took more work.</p>
+        <div class="fig-grid wide">
+          <figure class="fig"><img src="/assets/img/market-maps/02.webp" alt="Example of a recruiter's hand-built market map spreadsheet" width="2500" height="1107" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/market-maps/03.webp" alt="Another market map spreadsheet format" width="2012" height="967" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/market-maps/04.webp" alt="Market map grid of companies against executive roles" width="2033" height="1263" loading="lazy" /></figure>
+          <figure class="fig"><img src="/assets/img/market-maps/05.webp" alt="Master company list kept in spreadsheet columns" width="1809" height="1564" loading="lazy" /></figure>
+        </div>
+        <p>The goal was a template that is quick and easy to use and produces polished maps recruiters can use to understand a potential contact and candidate base, consult on hiring strategy, build executive relationships over time, and activate a placement quickly. For the product, that meant making the app the home of executive data and actions: <strong>centralize the work, and make past work reusable.</strong></p>
+      </section>
+
+      <section>
+        <h2><span class="num">The constraint</span>A data source that was not guaranteed</h2>
+        <p>The original vision was parameter-driven. A user would enter work experience, level and function, and the feature would pull matching people from a third-party database and group them by company. The PM and I were asked to design and build with that integration in mind while leadership was still negotiating the deal.</p>
+        <p>That worried us. A map only works if it can track each person's level (C-suite, director, VP, manager) and function (finance, HR, engineering, product), and that depended on a reliable database. We told stakeholders that without it the feature would not be impactful. They took the feedback in and asked us to design a more manual early phase: users start a blank map and fill it with companies they pick by hand. <strong>The deal later fell through, so the manual phase became the product.</strong></p>
+      </section>
+
+      <section>
+        <h2><span class="num">The design</span>One dataset, three views</h2>
+        <p>Everyone in the app reads from the same database of people, companies and past searches, but each context needs the data differently. I proposed that we rethink how we display it, so each view shows what it needs and no more. I used three information levels as a conceptual tool (they are not a term in the app):</p>
+        <ol class="levels">
+          <li><span><strong>The highest-level information:</strong> name, avatar, location.</span></li>
+          <li><span><strong>More metadata,</strong> such as company size, tags and calls to action.</span></li>
+          <li><span><strong>The most detail:</strong> the person or company profile in the side panel.</span></li>
+        </ol>
+        <figure class="fig wide"><img src="/assets/img/market-maps/06.webp" alt="Diagram of the three information levels across cards, lists and the side panel" width="2500" height="1253" loading="lazy" /></figure>
+        <p>A market map needs more than one view state, so I designed three. Two of them map back to the spreadsheets recruiters already used, and the third uses data that already exists in the app to further enhance the research workflow.</p>
+        <figure class="fig wide">
+          <img src="/assets/img/market-maps/07.webp" alt="Market Map view: people grouped under their companies" width="1693" height="1061" loading="lazy" />
+          <figcaption><strong>Market Map view</strong>The spreadsheet where people sit under their company, sorted by level and function, now in one place. It replaces the company-grouped lists and the grids of companies against executive roles.</figcaption>
+        </figure>
+        <figure class="fig wide">
+          <img src="/assets/img/market-maps/08.webp" alt="Company view: companies with sortable details" width="1693" height="1048" loading="lazy" />
+          <figcaption><strong>Company view</strong>Replaces the master company lists, where recruiters kept companies in columns by category. The same companies now carry their own details, so they can be sorted by industry, sector or size.</figcaption>
+        </figure>
+        <figure class="fig wide">
+          <img src="/assets/img/market-maps/09.webp" alt="Engagement view: each person's engagement with recruiters and searches" width="1720" height="1052" loading="lazy" />
+          <figcaption><strong>Engagement view</strong>Has no spreadsheet equivalent. It shows each person's engagement with recruiters and with active and past searches, using Projects metadata such as outreach and event history, so recruiters can source candidates directly from a market map.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">The bigger picture</span>How it fits the suite</h2>
+        <p>At first the feature was a mapping tool that displayed data. As I learned more from recruiters and partners, I saw that a market map is part of the ecosystem of workflows that lead to a successful search. I looked at how it fits with Projects, Lists, Pipelines and Market Maps, and proposed that a market map could evolve into a Project, and the reverse, because the two have very different needs but work from the same data.</p>
+        <p>Time and resource constraints meant we scoped that out and shipped a barebones version first. One people view was also scoped out because it was not relevant to market maps, though it can apply in other contexts.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">Reflection</span>What I learned</h2>
+        <ul class="points">
+          <li><strong>Design for the degraded case first.</strong>When a feature depends on data or a deal you do not control, design the version that works without it before polishing the version that depends on it.</li>
+          <li><strong>Name the riskiest assumption at kickoff.</strong>Here it was the data source. The PM and I raised the concern with stakeholders, and the result was a manual first phase.</li>
+          <li><strong>Do not let a manual workflow copy the spreadsheet.</strong>If the data cannot do the work, the design has to remove other effort, for example reusing a past map or starting from a template.</li>
+          <li><strong>Ship small and learn.</strong>A narrower first release that real users touch teaches more than a full vision that waits on a dependency.</li>
+          <li><strong>Think in the whole ecosystem, then ship the smallest slice.</strong>I saw Market Maps as one piece of a suite and proposed letting a map turn into a Project and back. We did not have the time or resources, so the first release stayed barebones.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">Outcome</span>Where it landed</h2>
+        <p>Market Maps shipped in early 2025, before clients were migrated to the new app. It is still in beta, released to a limited number of recruiters for testing. There were plans on the roadmap to revitalize the feature, but I left the team before then.</p>
+      </section>
+    </article>
+
+    <nav class="next wrap" aria-label="Next case study">
+      <p class="next-label">Next case study</p>
+      <a class="next-card" href="/work/network/">
+        <img src="/assets/img/network/01.webp" alt="" width="1742" height="769" loading="lazy" />
+        <div>
+          <p class="meta"><span>Thrive TRM</span> Network</p>
+          <h2>Network: who knows whom</h2>
+          <p>Managing references, referrals and introductions in one place, and discovering who worked with whom.</p>
+          <span class="more">Read the case study <span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="footer wrap">
+    <p><a href="/">Home</a> · <a href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">Résumé</a> · <a href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">LinkedIn</a> · <a href="mailto:keat.teoh@gmail.com">keat.teoh@gmail.com</a></p>
+    <p>© Keat Teoh</p>
+  </footer>
+  <script src="/case.js" defer></script>
+</body>
+</html>
