@@ -235,3 +235,32 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
   .next-card { grid-template-columns: 1fr; gap: 16px; padding: 14px; }
   .cs-body h2 { margin-top: 56px; }
 }
+
+/* Data tables (case studies) */
+.table-wrap { margin: 32px auto; }
+.table-box { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.table-wrap figcaption { margin-top: 12px; font-size: 14px; color: var(--muted); text-align: center; }
+.data { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 1.5; }
+.data th, .data td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.data tbody tr:last-child > * { border-bottom: 0; }
+.data thead th { background: var(--accent); color: var(--accent-ink); font: 600 13px/1.3 var(--font-body); letter-spacing: .04em; text-transform: uppercase; border-bottom: 0; }
+.data tbody th { font-weight: 600; color: var(--fg); width: 22%; }
+.data tbody td { color: color-mix(in srgb, var(--fg) 82%, var(--bg)); }
+.data tbody tr:nth-child(even) > * { background: color-mix(in srgb, var(--accent) 5%, var(--surface)); }
+.data tbody tr:hover > * { background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+
+/* Phones: each row becomes a labelled card */
+@media (max-width: 640px) {
+  .data, .data tbody, .data tr, .data th, .data td { display: block; width: 100%; }
+  .table-box { border: 0; background: transparent; border-radius: 0; overflow: visible; }
+  .table-wrap { display: flex; flex-direction: column; }
+  .data thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .table-wrap figcaption { order: -1; margin: 0 0 10px; text-align: left; }
+  .data tbody tr { margin-bottom: 12px; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: var(--surface); }
+  .data tbody tr > *, .data tbody tr:nth-child(even) > *, .data tbody tr:hover > * { background: transparent; }
+  .data tbody th { width: auto; padding: 12px 16px; background: var(--accent) !important; color: var(--accent-ink); }
+  .data tbody td { padding: 10px 16px; border-bottom: 1px solid var(--line); }
+  .data tbody tr > td:last-child { border-bottom: 0; }
+  .data td::before { content: attr(data-label); display: block; font-size: 12px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+  .data td[data-label=""]::before { display: none; }
+}

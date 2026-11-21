@@ -61,7 +61,20 @@
 
       <section>
         <h2><span class="num">Research</span>Who needs what within a search</h2>
-        <figure class="fig wide"><img src="/assets/img/projects/02.webp" alt="Chart comparing what a recruiter and a hiring manager need at each stage of a search" width="919" height="423" loading="lazy" /></figure>
+        <figure class="table-wrap wide">
+          <div class="table-box"><table class="data" aria-label="What each side of the search needs at every stage">
+            <thead><tr><th scope="col">Stage</th><th scope="col">Search team</th><th scope="col">Hiring team</th><th scope="col">Shared</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Kickoff</th><td data-label="Search team">Runs the call, prepares with market research</td><td data-label="Hiring team">Syncs on strategy and job brief</td><td data-label="Shared">Brief, strategy</td></tr>
+              <tr><th scope="row">Sourcing</th><td data-label="Search team">Finds candidates who fit, are open to interviewing, and are not off-limits</td><td data-label="Hiring team">May provide carve-out candidates up front</td><td data-label="Shared">Carve-out candidates, benchmark candidates</td></tr>
+              <tr><th scope="row">Presenting candidates</th><td data-label="Search team">Curates who and what the client sees, generates reports and pre-call agendas</td><td data-label="Hiring team">Reviews candidates, signals to prioritize or deprioritize candidates</td><td data-label="Shared">Candidate CSV, selective notes, references</td></tr>
+              <tr><th scope="row">Interviews and assessments</th><td data-label="Search team">Moves candidates between stages, collects assessments</td><td data-label="Hiring team">Joins later interviews, tracks the schedule, adds their candidate assessments</td><td data-label="Shared">Assessments, interview schedules, documents</td></tr>
+              <tr><th scope="row">Offer and placement</th><td data-label="Search team">Prepares the compensation letter, negotiates, places the candidate</td><td data-label="Hiring team">Does not see the offer in the app, but syncs with the search team in person</td><td data-label="Shared">Relevant contract or compensation documents</td></tr>
+              <tr><th scope="row">Post-search</th><td data-label="Search team">Reuses it as a benchmark, candidate source, and compensation comparison</td><td data-label="Hiring team">None, since the job is done!</td><td data-label="Shared">Internal only</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption>What each side of the search needs at every stage</figcaption>
+        </figure>
         <p>The recruiter's side is rich at every stage. The hiring manager's side is narrow and concentrated in the middle. That asymmetry was the design problem. Other users within a search team include the Partner, Researcher, Engagement Coordinator and Analyst, each with their own role and goals.</p>
         <figure class="fig wide">
           <img src="/assets/img/projects/03.webp" alt="User journey map for the Executive Search customer type" width="2500" height="1082" loading="lazy" />
@@ -72,7 +85,17 @@
       <section>
         <h2><span class="num">Design</span>One Project, three lenses</h2>
         <p>The same candidates appear in three views, each answering a different question.</p>
-        <figure class="fig wide"><img src="/assets/img/projects/04.webp" alt="The three Project views: card list, kanban with side panel, and table" width="919" height="184" loading="lazy" /></figure>
+        <figure class="table-wrap wide">
+          <div class="table-box"><table class="data" aria-label="Three views of one Project">
+            <thead><tr><th scope="col">View</th><th scope="col">The question it answers</th><th scope="col">What it adds</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Kanban</th><td data-label="The question it answers">Where is everyone in this search?</td><td data-label="What it adds">Stage flow, quick actions, team feedback</td></tr>
+              <tr><th scope="row">List</th><td data-label="The question it answers">What is happening with this person?</td><td data-label="What it adds">Notes, tags, last outreach, and how many outreaches in this project versus overall</td></tr>
+              <tr><th scope="row">Table</th><td data-label="The question it answers">How do I compare and act on many at once?</td><td data-label="What it adds">Off-limits as its own column, owner, priority, sortable and filterable columns</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption>Three views of one Project</figcaption>
+        </figure>
         <p>Information also deepens in three levels: the card shows the basics, the list adds search-progress detail, and the side panel holds everything about the person. A recruiter can step through candidates in a stage with the panel open, so they never lose their place.</p>
         <p>I decided what belongs on a kanban card versus the side panel. The panel itself holds many tabs (experience, notes, outreaches, assessments, interviews, activity, compensation, documents, network), and I think of them in four groups: <strong>who they are, can we approach them, how is the search going, and what is sensitive.</strong></p>
         <figure class="fig wide">
@@ -107,7 +130,20 @@
       <section>
         <h2><span class="num">Client portal</span>The hiring manager's view</h2>
         <p>The hiring manager sees the same search through a different lens.</p>
-        <figure class="fig wide"><img src="/assets/img/projects/09.webp" alt="Side-by-side comparison of what a recruiter and a hiring manager see" width="919" height="391" loading="lazy" /></figure>
+        <figure class="table-wrap wide">
+          <div class="table-box"><table class="data" aria-label="What the search team and the hiring team each get">
+            <thead><tr><th scope="col"></th><th scope="col">Search teams</th><th scope="col">Hiring team</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Layout</th><td data-label="Search teams">Kanban, list or table</td><td data-label="Hiring team">One list grouped by stage, collapsible with total counts</td></tr>
+              <tr><th scope="row">Actions per candidate</th><td data-label="Search teams">About a dozen</td><td data-label="Hiring team">Prioritization, add notes, add assessments, review references</td></tr>
+              <tr><th scope="row">What they see in a candidate</th><td data-label="Search teams">Multiple tabs covering the candidate's full profile, including experience, past interactions and their network</td><td data-label="Hiring team">Focused on the role search: experience, interviews, notes, references and assessments</td></tr>
+              <tr><th scope="row">What they don't see</th><td data-label="Search teams">N/A</td><td data-label="Hiring team">Off-limits, outreaches, activity history, documents, network, the recruiter's sourcing tools, and backchannel references</td></tr>
+              <tr><th scope="row">Vocabulary</th><td data-label="Search teams">Scorecards and events</td><td data-label="Hiring team">Assessments and interviews</td></tr>
+              <tr><th scope="row">Summary</th><td data-label="Search teams">Reports and table views</td><td data-label="Hiring team">A project summary with candidate count, average compensation data, project updates, and past and upcoming interviews</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption>What the search team and the hiring team each get</figcaption>
+        </figure>
         <p>A few decisions worth naming:</p>
         <ul class="points">
           <li><strong>Signals, not decisions.</strong>Thumbs up and down tell the recruiter how many people want to proceed. The recruiter or team lead still moves candidates between stages, so authority stays where it belongs.</li>
@@ -129,7 +165,17 @@
       <section>
         <h2><span class="num">Permissions</span>Layers of control</h2>
         <p>Who sees what is decided at three levels, each at the moment the recruiter acts.</p>
-        <figure class="fig wide"><img src="/assets/img/projects/12.webp" alt="The three levels of sharing control" width="919" height="184" loading="lazy" /></figure>
+        <figure class="table-wrap wide">
+          <div class="table-box"><table class="data" aria-label="Three layers of sharing control">
+            <thead><tr><th scope="col">Layer</th><th scope="col">Control</th><th scope="col">Where it lives</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Candidate</th><td data-label="Control">Show or hide this candidate from the hiring team</td><td data-label="Where it lives">Eye icon, and a toggle when adding to a project</td></tr>
+              <tr><th scope="row">Data objects</th><td data-label="Control">Share a note, assessment, or document, or keep it private</td><td data-label="Where it lives">Share control on each form, with drafts saved privately</td></tr>
+              <tr><th scope="row">User role and permissions</th><td data-label="Control">Whether this hiring manager sees compensation data</td><td data-label="Where it lives">The invitation to the client portal, and the admin page</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption>Three layers of sharing control</figcaption>
+        </figure>
         <p>Compensation shown to the hiring team is always aggregated, never per candidate. Candidates hidden from the hiring team also stay out of generated reports by default.</p>
         <blockquote class="quote"><p>Sharing is a choice made at the moment of writing, not a setting to find later.</p></blockquote>
         <figure class="fig wide"><img src="/assets/img/projects/13.webp" alt="Scorecard sharing options" width="1696" height="1035" loading="lazy" /></figure>
@@ -138,7 +184,17 @@
       <section>
         <h2><span class="num">Reporting</span>Getting information to the client</h2>
         <p>The same data reaches the client in three shapes, matched to three moments.</p>
-        <figure class="fig wide"><img src="/assets/img/projects/14.webp" alt="Three ways information reaches the client" width="919" height="168" loading="lazy" /></figure>
+        <figure class="table-wrap wide">
+          <div class="table-box"><table class="data" aria-label="Three ways information reaches the client">
+            <thead><tr><th scope="col">Output</th><th scope="col">Moment</th><th scope="col">Who drives</th><th scope="col">Format</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Client portal</th><td data-label="Moment">Anytime between calls</td><td data-label="Who drives">The client</td><td data-label="Format">Live and always current</td></tr>
+              <tr><th scope="row">Pre-call agendas</th><td data-label="Moment">During or just before a call</td><td data-label="Who drives">The recruiter</td><td data-label="Format">Modal to screenshare, copy or download as a document</td></tr>
+              <tr><th scope="row">Project summary reports</th><td data-label="Moment">Post-call, for analysis or sharing</td><td data-label="Who drives">The recruiter</td><td data-label="Format">Exportable spreadsheet</td></tr>
+            </tbody>
+          </table></div>
+          <figcaption>Three ways information reaches the client</figcaption>
+        </figure>
         <figure class="fig wide">
           <img src="/assets/img/projects/15.webp" alt="Generating a pre-call agenda from a Project" width="1691" height="1036" loading="lazy" />
           <figcaption>Generated outputs let the recruiter choose which stages and details to include, and they respect any filter or sort already applied on screen.</figcaption>
