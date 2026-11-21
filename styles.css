@@ -92,6 +92,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
   padding: 24px; margin-bottom: 24px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 24px;
 }
+.case:nth-of-type(even) { grid-template-columns: 1fr 1.25fr; }
 .case:nth-of-type(even) .case-media { order: 2; }
 .case-media { display: block; overflow: hidden; border-radius: var(--radius); background: var(--line); aspect-ratio: 16 / 10; }
 .case-media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
@@ -124,7 +125,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 @media (max-width: 860px) {
   .hero { grid-template-columns: 1fr; gap: 32px; padding: 40px 0 48px; }
   .portrait { width: 160px; order: -1; transform: rotate(-3deg); border-radius: 20px; }
-  .case { grid-template-columns: 1fr; gap: 20px; padding: 16px; }
+  .case, .case:nth-of-type(even) { grid-template-columns: 1fr; gap: 20px; padding: 16px; }
   .case:nth-of-type(even) .case-media { order: 0; }
   .case-body, .case:nth-of-type(even) .case-body { padding: 0 4px 4px; }
   .case h3 { font-size: 22px; }
