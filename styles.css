@@ -104,8 +104,8 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 .case h3 a { text-decoration: none; }
 .case h3 a:hover { text-decoration: underline; text-underline-offset: 5px; }
 .case-body > p:not(.meta) { color: var(--muted); margin: 12px 0 20px; }
-.stat { display: flex; align-items: baseline; gap: 12px; margin: 0 0 20px; padding: 14px 16px; border-radius: 12px; background: var(--bg); }
-.stat dt { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.stat { display: flex; align-items: center; gap: 14px; margin: 0 0 20px; padding: 14px 16px; border-radius: 12px; background: var(--bg); }
+.stat dt { font-family: var(--font-display); font-size: 28px; font-weight: 700; color: var(--accent); white-space: nowrap; line-height: 1; }
 .stat dd { margin: 0; font-size: 14px; font-weight: 500; line-height: 1.4; }
 .more { font-weight: 600; text-decoration: none; }
 .more span { display: inline-block; transition: transform .15s ease; }
