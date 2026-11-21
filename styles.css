@@ -79,7 +79,7 @@ a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-
 .lede { font-size: 19px; color: var(--muted); max-width: 56ch; margin: 20px 0 28px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 0; }
 .text-link { font-weight: 600; font-size: 15px; margin-left: 4px; text-underline-offset: 4px; }
-.portrait { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 24px; transform: rotate(2deg); box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); }
+.portrait { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 24px; transform: rotate(2deg); box-shadow: 0 20px 40px -20px rgba(0,0,0,.35); }
 
 /* Case studies */
 .work { padding: 24px 0 40px; }
