@@ -38,7 +38,7 @@
       <p class="lede">Before every search, recruiters build a market map: a view of who sits where across a set of companies. They built them by hand in spreadsheets. I led the design of Market Maps, which brings that work into the app. We planned it around a third-party people database that never came through, so this case study is as much about designing under uncertainty as it is about the interface.</p>
       <dl class="snapshot">
         <div><dt>Role</dt><dd>Lead product designer; one of two lead designers on the Thrive TRM rebuild</dd></div>
-        <div><dt>Team</dt><dd>One PM, one front-end and one back-end engineer, with design and product leadership reviewing</dd></div>
+        <div><dt>Team</dt><dd>One PM, one front-end engineer, and one back-end engineer, with design and product leadership reviewing</dd></div>
         <div><dt>Timeline</dt><dd>Designed and built August–October 2024; shipped early 2025</dd></div>
         <div><dt>Platform</dt><dd>Desktop enterprise web app</dd></div>
       </dl>
@@ -60,20 +60,20 @@
 
       <section>
         <h2><span class="num">The constraint</span>A data source that was not guaranteed</h2>
-        <p>The original vision was parameter-driven. A user would enter work experience, level and function, and the feature would pull matching people from a third-party database and group them by company. The PM and I were asked to design and build with that integration in mind while leadership was still negotiating the deal.</p>
+        <p>The original vision was parameter-driven. A user would enter work experience, level, and function, and the feature would pull matching people from a third-party database and group them by company. The PM and I were asked to design and build with that integration in mind while leadership was still negotiating the deal.</p>
         <p>That worried us. A map only works if it can track each person's level (C-suite, director, VP, manager) and function (finance, HR, engineering, product), and that depended on a reliable database. We told stakeholders that without it the feature would not be impactful. They took the feedback in and asked us to design a more manual early phase: users start a blank map and fill it with companies they pick by hand. <strong>The deal later fell through, so the manual phase became the product.</strong></p>
         <p>Without the third-party source, all the people and company data on a map comes from what customers maintain themselves in the app.</p>
       </section>
 
       <section>
         <h2><span class="num">The design</span>One dataset, three views</h2>
-        <p>Everyone in the app reads from the same database of people, companies and past searches, but each context needs the data differently. I proposed that we rethink how we display it, so each view shows what it needs and no more. I used three information levels as a conceptual tool (they are not a term in the app):</p>
+        <p>Everyone in the app reads from the same database of people, companies, and past searches, but each context needs the data differently. I proposed that we rethink how we display it, so each view shows what it needs and no more. I used three information levels as a conceptual tool (they are not a term in the app):</p>
         <ol class="levels">
           <li><span><strong>The highest-level information:</strong> name, avatar, location.</span></li>
-          <li><span><strong>More metadata,</strong> such as company size, tags and calls to action.</span></li>
+          <li><span><strong>More metadata,</strong> such as company size, tags, and calls to action.</span></li>
           <li><span><strong>The most detail:</strong> the person or company profile in the side panel.</span></li>
         </ol>
-        <figure class="fig wide"><img src="/assets/img/market-maps/06.webp" alt="Diagram of the three information levels across cards, lists and the side panel" width="2500" height="1253" loading="lazy" /></figure>
+        <figure class="fig wide"><img src="/assets/img/market-maps/06.webp" alt="Diagram of the three information levels across cards, lists, and the side panel" width="2500" height="1253" loading="lazy" /></figure>
         <p>A market map needs more than one view state, so I designed three. Two of them map back to the spreadsheets recruiters already used, and the third uses data that already exists in the app to further enhance the research workflow.</p>
         <figure class="fig wide">
           <img src="/assets/img/market-maps/07.webp" alt="Market Map view: people grouped under their companies" width="1693" height="1061" loading="lazy" />
@@ -81,7 +81,7 @@
         </figure>
         <figure class="fig wide">
           <img src="/assets/img/market-maps/08.webp" alt="Company view: companies with sortable details" width="1693" height="1048" loading="lazy" />
-          <figcaption><strong>Company view</strong>Replaces the master company lists, where recruiters kept companies in columns by category. The same companies now carry their own details, so they can be sorted by industry, sector or size.</figcaption>
+          <figcaption><strong>Company view</strong>Replaces the master company lists, where recruiters kept companies in columns by category. The same companies now carry their own details, so they can be sorted by industry, sector, or size.</figcaption>
         </figure>
         <figure class="fig wide">
           <img src="/assets/img/market-maps/09.webp" alt="Engagement view: each person's engagement with recruiters and searches" width="1720" height="1052" loading="lazy" />
@@ -91,7 +91,7 @@
 
       <section>
         <h2><span class="num">The bigger picture</span>How it fits the suite</h2>
-        <p>At first the feature was a mapping tool that displayed data. As I learned more from recruiters and partners, I saw that a market map is part of the ecosystem of workflows that lead to a successful search. I looked at how it fits with Projects, Lists, Pipelines and Market Maps, and proposed that a market map could evolve into a Project, and the reverse, because the two have very different needs but work from the same data.</p>
+        <p>At first the feature was a mapping tool that displayed data. As I learned more from recruiters and partners, I saw that a market map is part of the ecosystem of workflows that lead to a successful search. I looked at how it fits with Projects, Lists, Pipelines, and Market Maps, and proposed that a market map could evolve into a Project, and the reverse, because the two have very different needs but work from the same data.</p>
         <p>Time and resource constraints meant we scoped that out and shipped a barebones version first. One people view was also scoped out because it was not relevant to market maps, though it can apply in other contexts.</p>
       </section>
 
@@ -119,7 +119,7 @@
         <div>
           <p class="meta"><span>03</span> Thrive TRM</p>
           <h2>Network: who knows whom</h2>
-          <p>Managing references, referrals and introductions in one place, and discovering who worked with whom.</p>
+          <p>Managing references, referrals, and introductions in one place, and discovering who worked with whom.</p>
           <span class="more">Read the case study <span aria-hidden="true">→</span></span>
         </div>
       </a>
