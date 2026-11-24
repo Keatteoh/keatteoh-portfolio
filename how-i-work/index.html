@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How I work now · Keat Teoh</title>
+  <meta name="description" content="How Keat Teoh takes a feature from research to a working, high-fidelity prototype with Claude, backed by 8+ years of design thinking and user research." />
+  <meta property="og:image" content="/assets/img/projects/splash.png" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/">Keat Teoh</a>
+      <nav class="quick" aria-label="Résumé and profiles">
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.06 3.77-2.06 4.03 0 4.77 2.65 4.77 6.1v5.46h-4v-4.84c0-1.16-.02-2.64-1.61-2.64-1.61 0-1.86 1.26-1.86 2.56v4.92h-4z"/></svg>
+          <span>LinkedIn</span>
+        <span class="sr-only"> (opens in new tab)</span></a>
+        <a class="btn btn-solid" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
+          <span>Résumé</span>
+        <span class="sr-only"> (opens in new tab)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-hero wrap">
+      <a class="back" href="/"><span aria-hidden="true">←</span> Home</a>
+      <p class="meta"><span>Process</span> Product design with AI · 2026</p>
+      <h1>How I work now</h1>
+      <p class="lede">I take a feature from a fuzzy problem to a working, high-fidelity prototype that engineers can build from. AI writes the prototype code. The 8+ years of research, information architecture, and product judgment decide what it builds.</p>
+      <dl class="snapshot">
+        <div><dt>What I own</dt><dd>Problem framing, research, scope, the prototype, reviews, handoff, and UX QA</dd></div>
+        <div><dt>Tools</dt><dd>Claude in VS Code, Figma, GitHub, Jira</dd></div>
+        <div><dt>What I hand off</dt><dd>A clickable prototype on real components, Jira epics, and Figma artifacts</dd></div>
+        <div><dt>What I don't do</dt><dd>Write production code. Engineers own what ships.</dd></div>
+      </dl>
+    </header>
+
+    <article class="cs-body wrap">
+      <section>
+        <h2><span class="num">The shift</span>From frames to working software</h2>
+        <p>Static mockups ask everyone to imagine how a feature behaves. A working prototype shows them. Stakeholders react to real interactions, developers spot technical constraints in the first review instead of the last, and edge cases (empty states, permissions, long lists) show up because the prototype has to handle them.</p>
+        <p>That changes what one designer can own. With a PM, I can take a feature from 0 to 1, stopping only at the code that ships to customers. <strong>The speed comes from AI. The direction still comes from research.</strong></p>
+      </section>
+
+      <section>
+        <h2><span class="num">The loop</span>From 0 to 1, end to end</h2>
+        <p>This is the workflow I used at Thrive TRM from September 2026, in a pod with a PM working against the roadmap.</p>
+        <ol class="levels">
+          <li><span><strong>Frame the problem.</strong> Talk with customer service and with users who are open to speaking with product, and dig into past usage data when it exists. Decide what to tackle next and why.</span></li>
+          <li><span><strong>Write the feature down in full.</strong> Product requirements, UX requirements, and scope: which pages and panels exist, what data they show, and what is out of scope. This description is the design, so it has to be precise.</span></li>
+          <li><span><strong>Prototype on real code.</strong> Each prototype branches from a regularly synced clone of the production codebase, so it starts from the real components and design system, with believable dummy data in place of a backend.</span></li>
+          <li><span><strong>Iterate in code, not frames.</strong> I refine behavior, layout, and copy directly in the prototype. When a PM arrives with an early prototype of their own, I branch from theirs.</span></li>
+          <li><span><strong>Review early and often.</strong> Weekly with the design team, through recorded walkthroughs with PMs, and in daily stand-ups with developers. The nearly final version goes to product leadership.</span></li>
+          <li><span><strong>Hand off and follow through.</strong> With the PM I write the Jira epic or tickets, attach the Figma artifacts, and walk developers through the prototype live in sprint meetings. Once it reaches a development environment, I join QA to catch UX friction and bugs.</span></li>
+        </ol>
+      </section>
+
+      <section>
+        <h2><span class="num">The split</span>What AI does and what I keep</h2>
+        <div class="split wide">
+          <div>
+            <h3>AI handles</h3>
+            <ul class="steps">
+              <li>Turning a detailed description into working screens</li>
+              <li>Wiring up states, dummy data, and interactions</li>
+              <li>Fast revisions after each round of feedback</li>
+              <li>The repetitive parts: variants, copy passes, consistency fixes</li>
+            </ul>
+          </div>
+          <div>
+            <h3>I keep</h3>
+            <ul class="steps">
+              <li>The problem definition and the research behind it</li>
+              <li>What to build, and what to leave out</li>
+              <li>Information architecture and who sees what</li>
+              <li>Every review, and the final quality check</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2><span class="num">Why experience matters</span>A prototype is only as good as its brief</h2>
+        <p>AI will build whatever it's asked to, quickly and confidently. Asking for the right thing is the hard part, and that's where my experience matters. The lessons in my case studies are the same judgment I now write into every brief:</p>
+        <ul class="points">
+          <li><strong>Different people need different views of the same data.</strong>In <a href="/work/projects/">Projects</a>, recruiters, researchers, and hiring teams each got a lens on one search. I write that role split into the brief before any screen exists.</li>
+          <li><strong>Design the degraded case first.</strong>In <a href="/work/market-maps/">Market Maps</a>, the planned data source never arrived. Now I prototype the version that works without the dependency before polishing the one that needs it.</li>
+          <li><strong>Every relationship has two ends.</strong>In <a href="/work/network/">Network</a>, the first release recorded only one side of each connection. Now the brief names both sides, and I walk the prototype through each one.</li>
+        </ul>
+        <div class="lesson"><h3>If I did this today</h3><p>Each of those case studies now ends with a short note on what I'd do differently with this workflow, and where a working prototype would have surfaced a problem sooner.</p></div>
+      </section>
+
+      <section>
+        <h2><span class="num">Built this way</span>This site</h2>
+        <p>I designed and built this portfolio with Figma, Claude, and GitHub, using the same loop: write the brief, build, review it on real devices, and keep revising until it holds up.</p>
+      </section>
+    </article>
+
+    <section class="contact wrap" aria-labelledby="contact-title">
+      <h2 id="contact-title">Need a designer who can own a feature from 0 to 1?</h2>
+      <p>I'm looking for a thoughtful, open team working on human-centered products with real complexity.</p>
+      <p class="hero-actions">
+        <a class="btn btn-solid btn-lg" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">View résumé<span class="sr-only"> (opens in new tab)</span></a>
+        <a class="btn btn-ghost btn-lg" href="/#work">See case studies</a>
+        <a class="btn btn-ghost btn-lg" href="mailto:keat.teoh@gmail.com">Email me</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p><a href="/">Home</a> · <a href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener">Résumé<span class="sr-only"> (opens in new tab)</span></a> · <a href="https://www.linkedin.com/in/keato/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in new tab)</span></a> · <a href="mailto:keat.teoh@gmail.com">keat.teoh@gmail.com</a></p>
+    <p>© Keat Teoh</p>
+  </footer>
+</body>
+</html>

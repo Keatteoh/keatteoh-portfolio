@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Style guide · Keat Teoh</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f7f5f0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    /* Style-guide-only helpers (not part of the site's CSS) */
+    .sg h2 { margin-top: 80px; }
+    .sg-note { font-size: 14px; color: var(--muted); }
+    code, .sg-code { font: 500 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; color: var(--fg); }
+    .sg-modes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 8px auto 28px; }
+    .sg-mode { border-radius: 18px; padding: 18px; border: 1px solid #00000014; }
+    .sg-mode h3 { margin: 0 0 14px !important; font-size: 16px !important; }
+    .sg-mode.light { background: #f7f5f0; color: #16181d; }
+    .sg-mode.dark { background: #111317; color: #f1efe9; border-color: #ffffff1a; }
+    .sg-sw { display: grid; grid-template-columns: 40px 1fr auto; gap: 12px; align-items: center; padding: 7px 0; font-size: 14px; border-top: 1px solid #8881; }
+    .sg-sw:first-of-type { border-top: 0; }
+    .sg-sw i { width: 40px; height: 40px; border-radius: 10px; border: 1px solid #8884; }
+    .sg-sw span { opacity: .75; font: 500 13px ui-monospace, Menlo, monospace; }
+    .sg-type { display: grid; gap: 0; margin: 8px auto 28px; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; background: var(--surface); }
+    .sg-type > div { display: grid; grid-template-columns: 180px 1fr; gap: 20px; align-items: baseline; padding: 18px 20px; border-top: 1px solid var(--line); }
+    .sg-type > div:first-child { border-top: 0; }
+    .sg-type dt { font-size: 13px; color: var(--muted); line-height: 1.4; }
+    .sg-type dt b { display: block; color: var(--fg); font-weight: 600; }
+    .sg-type dd { margin: 0; min-width: 0; }
+    .sg-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin: 8px auto 20px; }
+    .sg-box { padding: 24px; border: 1px dashed var(--line); border-radius: 18px; margin: 8px auto 12px; }
+    .sg-radii { display: flex; flex-wrap: wrap; gap: 16px; margin: 8px auto 28px; }
+    .sg-radii div { width: 96px; height: 72px; background: var(--surface); border: 1.5px solid var(--accent); display: grid; place-items: center; font: 600 13px var(--font-body); }
+    .sg .case { margin-bottom: 0; }
+    @media (max-width: 640px) {
+      .sg-modes { grid-template-columns: 1fr; }
+      .sg-type > div { grid-template-columns: 1fr; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="logo" href="/">Keat Teoh</a>
+      <nav class="quick" aria-label="Résumé and profiles">
+        <a class="btn btn-solid" href="/assets/Keat-Teoh-Resume.pdf" target="_blank" rel="noopener"><span>Résumé</span><span class="sr-only"> (opens in new tab)</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="cs-hero wrap">
+      <a class="back" href="/"><span aria-hidden="true">←</span> Home</a>
+      <p class="meta"><span>Reference</span> Portfolio design system</p>
+      <h1>Style guide</h1>
+      <p class="lede">The colors, type, spacing, and components behind this site. Everything below is rendered with the live <code>styles.css</code>, so it always matches the real pages. Switch your system between light and dark mode to see both themes.</p>
+      <dl class="snapshot">
+        <div><dt>Fonts</dt><dd>Poppins (display), Inter (body)</dd></div>
+        <div><dt>Themes</dt><dd>Light and dark, following the system setting</dd></div>
+        <div><dt>Layout</dt><dd>1120px page, 700px reading column, 1040px wide figures</dd></div>
+        <div><dt>Breakpoints</dt><dd>860px, 640px, 480px</dd></div>
+      </dl>
+    </header>
+
+    <article class="cs-body wrap sg">
+      <section>
+        <h2><span class="num">01 · Color</span>Tokens</h2>
+        <p>All color comes from seven tokens on <code>:root</code>, redefined for dark mode. Tints are mixed from them with <code>color-mix()</code> rather than added as new colors.</p>
+        <div class="sg-modes wide">
+          <div class="sg-mode light">
+            <h3>Light</h3>
+            <div class="sg-sw"><i style="background:#f7f5f0"></i>--bg · page<span>#f7f5f0</span></div>
+            <div class="sg-sw"><i style="background:#ffffff"></i>--surface · cards<span>#ffffff</span></div>
+            <div class="sg-sw"><i style="background:#16181d"></i>--fg · text<span>#16181d</span></div>
+            <div class="sg-sw"><i style="background:#5d6270"></i>--muted · secondary text<span>#5d6270</span></div>
+            <div class="sg-sw"><i style="background:#e2ded4"></i>--line · borders<span>#e2ded4</span></div>
+            <div class="sg-sw"><i style="background:#2f5bea"></i>--accent · links, buttons<span>#2f5bea</span></div>
+            <div class="sg-sw"><i style="background:#1f9d55"></i>--live · status dot<span>#1f9d55</span></div>
+          </div>
+          <div class="sg-mode dark">
+            <h3>Dark</h3>
+            <div class="sg-sw"><i style="background:#111317"></i>--bg · page<span>#111317</span></div>
+            <div class="sg-sw"><i style="background:#1a1d23"></i>--surface · cards<span>#1a1d23</span></div>
+            <div class="sg-sw"><i style="background:#f1efe9"></i>--fg · text<span>#f1efe9</span></div>
+            <div class="sg-sw"><i style="background:#a3a8b4"></i>--muted · secondary text<span>#a3a8b4</span></div>
+            <div class="sg-sw"><i style="background:#2c3038"></i>--line · borders<span>#2c3038</span></div>
+            <div class="sg-sw"><i style="background:#7c9bff"></i>--accent · links, buttons<span>#7c9bff</span></div>
+            <div class="sg-sw"><i style="background:#4ade80"></i>--live · status dot<span>#4ade80</span></div>
+          </div>
+        </div>
+        <p class="sg-note">Text on the accent uses <code>--accent-ink</code> (#ffffff light, #0d1020 dark). Tinted panels use the accent at 10% over the surface, with a 30% accent border.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">02 · Type</span>Typography</h2>
+        <p>Poppins sets headings at 500–700 with tight 1.15 leading and −0.01em tracking. Inter sets body text at 17px with 1.6 leading.</p>
+        <dl class="sg-type wide">
+          <div><dt><b>Display</b>Poppins 600 · clamp(34–60px)</dt><dd><span style="font:600 clamp(34px,5vw,56px)/1.1 var(--font-display);letter-spacing:-.01em">Clear paths</span></dd></div>
+          <div><dt><b>Section heading</b>Poppins 600 · clamp(24–32px)</dt><dd><span style="font:600 clamp(24px,3vw,32px)/1.15 var(--font-display)">One dataset, three views</span></dd></div>
+          <div><dt><b>Card title</b>Poppins 600 · 26px (22px phone)</dt><dd><span style="font:600 26px/1.15 var(--font-display)">Projects: one search, many people</span></dd></div>
+          <div><dt><b>Subheading</b>Poppins 600 · 20px</dt><dd><span style="font:600 20px/1.2 var(--font-display)">What I'd carry forward</span></dd></div>
+          <div><dt><b>Lede</b>Inter 400 · 19px · muted</dt><dd><span style="font-size:19px;color:var(--muted)">Senior product designer with 8+ years in B2B SaaS.</span></dd></div>
+          <div><dt><b>Body</b>Inter 400 · 17px / 1.6</dt><dd>Realigning the information architecture was the first step.</dd></div>
+          <div><dt><b>Small and captions</b>Inter 400 · 14px · muted</dt><dd><span style="font-size:14px;color:var(--muted)">A user flow mapping the various paths to form a connection.</span></dd></div>
+          <div><dt><b>Kicker</b>Inter 600 · 13px · caps · 0.08em</dt><dd><span style="font:600 13px var(--font-body);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)">The problem</span></dd></div>
+          <div><dt><b>Meta</b>Inter 600 · 13px · muted, accent number</dt><dd><p class="meta" style="margin:0"><span>02</span> Thrive TRM · Senior Product Designer · 2024–2025</p></dd></div>
+        </dl>
+        <p class="sg-note">Spelling and punctuation: US spelling, straight apostrophes, serial commas, en dashes for ranges (2024–2026), and " · " between metadata items.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">03 · Shape</span>Radius and spacing</h2>
+        <div class="sg-radii">
+          <div style="border-radius:8px">8 · focus</div>
+          <div style="border-radius:12px">12 · stat</div>
+          <div style="border-radius:14px">14 · media</div>
+          <div style="border-radius:18px">18 · panels</div>
+          <div style="border-radius:24px">24 · cards</div>
+          <div style="border-radius:999px">999 · pills</div>
+        </div>
+        <ul class="steps">
+          <li><strong>Page:</strong> <code>.wrap</code> is min(1120px, 100% − 32px), a 16px gutter on phones.</li>
+          <li><strong>Reading column:</strong> 700px for text; <code>.wide</code> breaks out to 1040px for figures.</li>
+          <li><strong>Rhythm:</strong> sections start 72px apart (56px on phones); blocks sit 28–40px apart; card padding is 20–24px.</li>
+          <li><strong>Elevation:</strong> flat. Cards use a 1px <code>--line</code> border instead of shadows; only the homepage portrait has one.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2><span class="num">04 · Actions</span>Buttons and links</h2>
+        <div class="sg-row">
+          <a class="btn btn-solid btn-lg" href="#">.btn-solid .btn-lg</a>
+          <a class="btn btn-ghost btn-lg" href="#">.btn-ghost .btn-lg</a>
+          <a class="btn btn-solid" href="#">.btn-solid</a>
+          <a class="btn btn-ghost" href="#">.btn-ghost</a>
+        </div>
+        <div class="sg-row">
+          <a class="more" href="#">Read the case study <span aria-hidden="true">→</span></a>
+          <a class="text-link" href="#">text-link</a>
+          <a class="back" href="#" style="margin:0"><span aria-hidden="true">←</span> All case studies</a>
+        </div>
+        <p class="sg-note">Pills are 40px tall (48px large). Hover lifts 1px; ghost borders darken to <code>--fg</code>. Focus shows a 3px accent outline. One solid button per group.</p>
+      </section>
+
+      <section>
+        <h2><span class="num">05 · Content blocks</span>Components</h2>
+
+        <h3>Snapshot <code>.snapshot</code></h3>
+        <dl class="snapshot" style="margin-top:8px">
+          <div><dt>Role</dt><dd>Lead designer</dd></div>
+          <div><dt>Team</dt><dd>One designer, one PM, one developer</dd></div>
+          <div><dt>Timeline</dt><dd>2025–2026</dd></div>
+        </dl>
+
+        <h3>Stat <code>.stat</code></h3>
+        <dl class="stat"><dt>2,000+</dt><dd>hiring-team users on the client portal within five months</dd></dl>
+
+        <h3>Outcomes <code>.outcomes</code></h3>
+        <div class="outcomes">
+          <div><b>250+</b><span>recruiters using Work Overlap</span></div>
+          <div><b>3 views</b><span>of one dataset</span></div>
+        </div>
+
+        <h3>Points <code>.points</code></h3>
+        <ul class="points">
+          <li><strong>Design the degraded case first.</strong>Design the version that works without a dependency before polishing the one that needs it.</li>
+        </ul>
+
+        <h3>Numbered levels <code>.levels</code> and bullets <code>.steps</code></h3>
+        <ol class="levels">
+          <li><span><strong>Frame the problem.</strong> Research before screens.</span></li>
+          <li><span><strong>Write it down in full.</strong> The brief is the design.</span></li>
+        </ol>
+        <ul class="steps">
+          <li>Square accent bullets for short lists</li>
+          <li>Keep each item to one line where possible</li>
+        </ul>
+
+        <h3>Quote <code>.quote</code></h3>
+        <blockquote class="quote"><p>Work Overlap cut the time recruiters spent researching relationships down to minutes.</p></blockquote>
+
+        <h3>Lesson <code>.lesson</code> and note <code>.today</code></h3>
+        <div class="lesson"><h3>What I'd carry forward</h3><p>A tinted panel for the key takeaway of a section.</p></div>
+        <div class="today"><p class="kicker">If I did this today</p><p>A dashed panel for a reflection on how the AI workflow would change past work.</p></div>
+
+        <h3>Split <code>.split</code></h3>
+        <div class="split">
+          <div><h3>AI handles</h3><ul class="steps"><li>Working screens</li></ul></div>
+          <div><h3>I keep</h3><ul class="steps"><li>The decisions</li></ul></div>
+        </div>
+
+        <h3>Data table <code>.data</code></h3>
+        <figure class="table-wrap">
+          <div class="table-box">
+            <table class="data">
+              <thead><tr><th>Role</th><th>Needs</th><th>Sees</th></tr></thead>
+              <tbody>
+                <tr><th>Recruiter</th><td data-label="Needs">The whole search</td><td data-label="Sees">Every stage</td></tr>
+                <tr><th>Hiring team</th><td data-label="Needs">Progress at a glance</td><td data-label="Sees">Client portal</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figcaption>Tables turn into labeled cards below 640px.</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2><span class="num">06 · Page patterns</span>Cards and bands</h2>
+        <h3>Case card <code>.case</code></h3>
+        <article class="case wide" style="margin-top:8px">
+          <a class="case-media" href="#" tabindex="-1" aria-hidden="true"><img src="/assets/img/network/splash.png" alt="" width="1742" height="769" loading="lazy" /></a>
+          <div class="case-body">
+            <p class="meta"><span>03</span> Thrive TRM · 2025–2026</p>
+            <h3><a href="#">Network: who knows whom</a></h3>
+            <p>Media on one side, summary, stat, and link on the other. Alternate cards flip sides.</p>
+            <a class="more" href="#">Read the case study <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <h3>Feature band <code>.now</code></h3>
+        <div class="now wide">
+          <div>
+            <p class="meta"><span>Process</span> Product design with AI</p>
+            <h2 style="margin-top:0">How I work now</h2>
+            <p>A tinted call-out that points to a single page.</p>
+          </div>
+          <a class="btn btn-solid btn-lg" href="#">See the workflow <span aria-hidden="true">→</span></a>
+        </div>
+
+        <h3>Figure <code>.fig</code></h3>
+        <figure class="fig">
+          <img src="/assets/img/market-maps/splash.png" alt="Example figure" width="1742" height="769" loading="lazy" />
+          <figcaption><strong>Optional bold title</strong>Centered 14px caption, muted, up to 64 characters wide. Images open in a lightbox.</figcaption>
+        </figure>
+      </section>
+    </article>
+  </main>
+
+  <footer class="footer wrap">
+    <p><a href="/">Home</a> · <a href="/how-i-work/">How I work now</a></p>
+    <p>© Keat Teoh</p>
+  </footer>
+</body>
+</html>
